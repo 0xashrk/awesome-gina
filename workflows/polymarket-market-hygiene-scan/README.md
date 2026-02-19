@@ -1,8 +1,8 @@
 ---
-id: workflow-polymarket-market-scan-dedup
-name: Polymarket Scan And Dedup Workflow
+id: polymarket-market-hygiene-scan
+name: Polymarket Market Hygiene Scan Workflow
 type: workflow
-summary: Scan active Polymarket markets, deduplicate event variants, and flag thin books before downstream actions.
+summary: Scan active Polymarket markets for deduplication and thin-book hygiene before downstream actions.
 category: workflows/market-data
 status: experimental
 owner: askgina
@@ -18,14 +18,14 @@ security:
     - write-run-artifacts
     - read/write-kv
 evidence:
-  setup: workflows/polymarket-scan-dedup/README.md#setup
+  setup: workflows/polymarket-market-hygiene-scan/README.md#setup
   example: null
-tags: [workflows, polymarket, market-data, dedup]
+tags: [workflows, polymarket, market-data, hygiene, dedup]
 ---
 
-# Polymarket Scan And Dedup Workflow
+# Polymarket Market Hygiene Scan Workflow
 
-Workflow submission with a concrete artifact at workflows/polymarket-scan-dedup/references/polymarket-market-scan-dedup@latest.ts.
+Workflow submission with a concrete artifact at workflows/polymarket-market-hygiene-scan/references/polymarket-market-hygiene-scan@latest.ts.
 
 ## What it does
 
@@ -67,8 +67,8 @@ Workflow submission with a concrete artifact at workflows/polymarket-scan-dedup/
 
 ## Setup
 
-1. Use workflows/polymarket-scan-dedup/references/polymarket-market-scan-dedup@latest.ts as the source artifact.
-2. Validate workflow definition and run with workflow run <id>.
+1. Use workflows/polymarket-market-hygiene-scan/references/polymarket-market-hygiene-scan@latest.ts as the source artifact.
+2. Validate workflow definition with workflow validate polymarket-market-hygiene-scan and run with workflow run polymarket-market-hygiene-scan.
 3. Ensure kv.list parsing treats entries as {key, value} objects.
 4. Exclude resolved markets with CAST(hours_until_end AS REAL) > 0.
 5. Evaluate and compare against baseline before promoting changes.
@@ -80,9 +80,9 @@ Workflow submission with a concrete artifact at workflows/polymarket-scan-dedup/
 
 ## Evidence
 
-- evidence.setup: workflows/polymarket-scan-dedup/README.md#setup
+- evidence.setup: workflows/polymarket-market-hygiene-scan/README.md#setup
 - evidence.example: missing (add a committed run artifact path or URL before claiming PR-ready verification)
-- Workflow artifact: workflows/polymarket-scan-dedup/references/polymarket-market-scan-dedup@latest.ts
+- Workflow artifact: workflows/polymarket-market-hygiene-scan/references/polymarket-market-hygiene-scan@latest.ts
 - Setup guide reference: skills/workflows/SKILL.md
 - Implementation details: skills/workflows/references/polymarket-patterns.md
 

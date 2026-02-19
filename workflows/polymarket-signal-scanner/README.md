@@ -1,8 +1,8 @@
 ---
-id: prediction-scanner
-name: Prediction Scanner Workflow
+id: polymarket-signal-scanner
+name: Polymarket Signal Scanner Workflow
 type: workflow
-summary: Scan active prediction markets, rank high-signal candidates, and persist shortlist snapshots.
+summary: Scan active Polymarket markets, rank high-signal candidates, and persist shortlist snapshots.
 category: workflows/market-data
 status: experimental
 owner: askgina
@@ -18,18 +18,18 @@ security:
     - write-run-artifacts
     - read/write-kv
 evidence:
-  setup: workflows/prediction-scanner/README.md#setup
+  setup: workflows/polymarket-signal-scanner/README.md#setup
   example: null
-tags: [workflows, prediction-markets, market-data, scanner]
+tags: [workflows, polymarket, signal-scanner, market-data]
 ---
 
-# Prediction Scanner Workflow
+# Polymarket Signal Scanner Workflow
 
-Workflow submission with a concrete artifact at workflows/prediction-scanner/references/prediction-scanner@latest.ts.
+Workflow submission with a concrete artifact at workflows/polymarket-signal-scanner/references/polymarket-signal-scanner@latest.ts.
 
 ## What it does
 
-- Fetches active prediction-market rows and registers a queryable SQL table.
+- Fetches active Polymarket rows and registers a queryable SQL table.
 - Scores markets using urgency, activity, and liquidity-thinness signals.
 - Produces a ranked shortlist plus run-over-run new/dropped market deltas.
 - Emits submission-ready JSON and markdown artifacts for review.
@@ -50,7 +50,7 @@ Workflow submission with a concrete artifact at workflows/prediction-scanner/ref
 - Side effects:
   - reads market data via fetchPolymarketData
   - writes run artifacts under /workspace/outputs/
-  - writes KV snapshots under prediction-scanner:
+  - writes KV snapshots under polymarket-signal-scanner:
 - Failure modes:
   - upstream market-tool timeout or malformed payload
   - numeric cast and parse errors on provider fields
@@ -58,16 +58,16 @@ Workflow submission with a concrete artifact at workflows/prediction-scanner/ref
 
 ## Workflow steps
 
-1. Fetch market rows with fetchPolymarketData and register prediction_scan_raw.
+1. Fetch market rows with fetchPolymarketData and register polymarket_signal_scan_raw.
 2. Filter/score candidates and persist current shortlist snapshot to KV.
 3. Compare against previous snapshot and emit submission/summary artifacts.
 
 ## Setup
 
-1. Use workflows/prediction-scanner/references/prediction-scanner@latest.ts as the source artifact.
-2. Validate definition with workflow validate prediction-scanner.
-3. Execute with workflow run prediction-scanner and review outputs.
-4. Confirm KV history with prediction-scanner: prefix keys.
+1. Use workflows/polymarket-signal-scanner/references/polymarket-signal-scanner@latest.ts as the source artifact.
+2. Validate definition with workflow validate polymarket-signal-scanner.
+3. Execute with workflow run polymarket-signal-scanner and review outputs.
+4. Confirm KV history with polymarket-signal-scanner: prefix keys.
 5. Compare shortlist deltas before promoting any downstream automation.
 
 ## Security and permissions
@@ -77,9 +77,9 @@ Workflow submission with a concrete artifact at workflows/prediction-scanner/ref
 
 ## Evidence
 
-- evidence.setup: workflows/prediction-scanner/README.md#setup
+- evidence.setup: workflows/polymarket-signal-scanner/README.md#setup
 - evidence.example: missing (add a committed run artifact path or URL before claiming PR-ready verification)
-- Workflow artifact: workflows/prediction-scanner/references/prediction-scanner@latest.ts
+- Workflow artifact: workflows/polymarket-signal-scanner/references/polymarket-signal-scanner@latest.ts
 
 ## Backlinks
 

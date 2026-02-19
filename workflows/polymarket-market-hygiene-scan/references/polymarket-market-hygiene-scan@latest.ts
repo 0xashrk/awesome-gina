@@ -2,10 +2,10 @@ import defineWorkflow from "/workspace/tools/workflow/defineWorkflow"
 
 export default defineWorkflow({
   version: 1,
-  id: "polymarket-market-scan-dedup",
-  name: "Polymarket Scan and Dedup",
+  id: "polymarket-market-hygiene-scan",
+  name: "Polymarket Market Hygiene Scan",
   description:
-    "Fetch active Polymarket markets, deduplicate event variants, flag thin books, and persist snapshot state.",
+    "Fetch active Polymarket markets, deduplicate event variants, flag thin books, and persist hygiene snapshot state.",
   triggers: [{ manual: true }],
   inputs: [
     { name: "limit", type: "number", required: false, default: 500 },
