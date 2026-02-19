@@ -74,6 +74,7 @@ Performs a cleanup pass every hour to normalize exposure and clear stale orders.
 promptText:
 Create a scheduled recipe:
 - Name: Hourly Redeem and Close Orders
+- Execute with: Ask Gina agent
 - Schedule: 30 * * * *
 - Timezone: UTC (or my scheduler default)
 - Task: Redeem all redeemable positions, sell remaining shares, and cancel open limit orders.

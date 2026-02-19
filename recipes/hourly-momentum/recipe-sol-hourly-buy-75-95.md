@@ -71,6 +71,7 @@ Buys the high-probability SOL side twice per hour using aggressive fills.
 promptText:
 Create a scheduled recipe:
 - Name: SOL Hourly Buy (75-95 Odds)
+- Execute with: Ask Gina agent
 - Schedule: 45,49 * * * *
 - Timezone: UTC (or my scheduler default)
 - Task: Buy the SOL hourly Up/Down side in the 75-95% odds band.

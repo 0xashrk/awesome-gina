@@ -72,6 +72,7 @@ One-line value proposition.
 promptText:
 Create a scheduled recipe:
 - Name: <recipe name>
+- Execute with: Ask Gina agent
 - Schedule: <cron>
 - Timezone: <timezone>
 - Task: <plain-English instruction to run each time>
@@ -111,7 +112,7 @@ Then return:
 ## Type-Specific Notes
 
 - `strategy`, `recipe`, `workflow`: full capability contract is required.
-- `recipe`: include a `Quick Copy Prompt (Ask Gina)` section with a `promptText` fenced `text` code block for one-click reuse.
+- `recipe`: include a `Quick Copy Prompt (Ask Gina)` section with a `promptText` fenced `text` code block for one-click reuse, including an explicit `Execute with` agent line.
 - `skill`, `filesystem`: concise capability contract is acceptable, but setup and side effects must still be explicit.
 
 ## Skill Content Format (Community Digest)
