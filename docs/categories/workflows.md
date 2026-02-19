@@ -9,6 +9,6 @@ Up: [Awesome Gina Index](../../README.md)
 
 ## Trading
 
-- [Signal Trading Stop-Loss v2 Workflow](../../workflows/signal-trading-stoploss-v2/README.md) - Attempt 15m BTC signal trades and monitor filled positions with stop-loss logic.
+- [Signal Prediction Stop-Loss v2 Workflow](../../workflows/signal-prediction-stoploss-v2/README.md) - Attempt 15m BTC signal trades and monitor filled positions with stop-loss logic.
 
 [Back to Contents](../../README.md)

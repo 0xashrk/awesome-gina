@@ -106,9 +106,9 @@ for (let i = 0; i < MONITOR_STEPS_COUNT; i++) {
 
 export default defineWorkflow({
   version: 1,
-  id: "signal-trading-stoploss-v2",
-  name: ASSET + " Signal-Based 15m Trading + Stop-Loss (v2)",
-  description: "Analyzes " + ASSET + ", places trade if confident, monitors with " + (STOP_LOSS_THRESHOLD * 100) + "% stop-loss. Optimized with early exit.",
+  id: "signal-prediction-stoploss-v2",
+  name: ASSET + " Signal-Based 15m Prediction Stop-Loss (v2)",
+  description: "Analyzes " + ASSET + ", attempts trade if confident, and monitors filled positions with " + (STOP_LOSS_THRESHOLD * 100) + "% stop-loss. Optimized with early exit.",
   stateFiles: [],  // Stateless — no shared file writes
   inputs: [
     { name: "asset", type: "string", default: ASSET },

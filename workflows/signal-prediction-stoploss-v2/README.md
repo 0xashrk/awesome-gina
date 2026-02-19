@@ -1,6 +1,6 @@
 ---
-id: signal-trading-stoploss-v2
-name: Signal Trading Stop-Loss v2 Workflow
+id: signal-prediction-stoploss-v2
+name: Signal Prediction Stop-Loss v2 Workflow
 type: workflow
 summary: Attempt 15m BTC signal trades and monitor filled positions with stop-loss exits.
 category: workflows/trading
@@ -17,14 +17,14 @@ security:
     - place-prediction-trade
     - close-prediction-position
 evidence:
-  setup: workflows/signal-trading-stoploss-v2/README.md#setup
+  setup: workflows/signal-prediction-stoploss-v2/README.md#setup
   example: null
 tags: [workflows, trading, stop-loss, btc, signal]
 ---
 
-# Signal Trading Stop-Loss v2 Workflow
+# Signal Prediction Stop-Loss v2 Workflow
 
-Workflow submission with a concrete artifact at workflows/signal-trading-stoploss-v2/references/signal-trading-stoploss-v2@latest.ts.
+Workflow submission with a concrete artifact at workflows/signal-prediction-stoploss-v2/references/signal-prediction-stoploss-v2@latest.ts.
 
 ## What it does
 
@@ -69,9 +69,9 @@ Workflow submission with a concrete artifact at workflows/signal-trading-stoplos
 
 ## Setup
 
-1. Use workflows/signal-trading-stoploss-v2/references/signal-trading-stoploss-v2@latest.ts as the source artifact.
-2. Validate with workflow validate signal-trading-stoploss-v2.
-3. Execute with workflow run signal-trading-stoploss-v2.
+1. Use workflows/signal-prediction-stoploss-v2/references/signal-prediction-stoploss-v2@latest.ts as the source artifact.
+2. Validate with workflow validate signal-prediction-stoploss-v2.
+3. Execute with workflow run signal-prediction-stoploss-v2.
 4. Start with minimal amountUsd and confirm stop-loss behavior before larger sizes.
 5. Review final summary action and monitor-step outputs after each run.
 
@@ -82,9 +82,9 @@ Workflow submission with a concrete artifact at workflows/signal-trading-stoplos
 
 ## Evidence
 
-- evidence.setup: workflows/signal-trading-stoploss-v2/README.md#setup
+- evidence.setup: workflows/signal-prediction-stoploss-v2/README.md#setup
 - evidence.example: missing (add run log/artifact URL before claiming verified status)
-- Workflow artifact: workflows/signal-trading-stoploss-v2/references/signal-trading-stoploss-v2@latest.ts
+- Workflow artifact: workflows/signal-prediction-stoploss-v2/references/signal-prediction-stoploss-v2@latest.ts
 
 ## Backlinks
 
