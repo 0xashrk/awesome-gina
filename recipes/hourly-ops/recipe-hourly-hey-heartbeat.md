@@ -66,7 +66,7 @@ Sends a minimal heartbeat message for scheduler and channel liveness checks.
 promptText:
 Create a scheduled recipe:
 - Name: Hourly Hey Heartbeat
-- Execute with: Ask Gina agent
+- Execute with agent: predictions
 - Schedule: 52 * * * *
 - Timezone: Europe/London
 - Task: Send the message hey to the configured heartbeat destination every run.

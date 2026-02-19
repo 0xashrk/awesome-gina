@@ -71,7 +71,7 @@ Buys the high-probability XRP side twice per hour using aggressive fills.
 promptText:
 Create a scheduled recipe:
 - Name: XRP Hourly Buy (75-95 Odds)
-- Execute with: Ask Gina agent
+- Execute with agent: predictions
 - Schedule: 42,47 * * * *
 - Timezone: UTC (or my scheduler default)
 - Task: Buy the XRP hourly Up/Down side in the 75-95% odds band.

@@ -71,7 +71,7 @@ Executes an aggressive all-position unwind near the top of each hour.
 promptText:
 Create a scheduled recipe:
 - Name: Hourly Sell All Positions
-- Execute with: Ask Gina agent
+- Execute with agent: predictions
 - Schedule: 58 * * * *
 - Timezone: UTC (or my scheduler default)
 - Task: Sell all open positions aggressively and redeem expired positions each run.
