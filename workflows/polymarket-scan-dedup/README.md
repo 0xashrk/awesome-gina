@@ -11,12 +11,21 @@ license: NOASSERTION
 verification:
   tier: unverified
   lastVerifiedAt: null
+security:
+  permissions:
+    - read-market-data
+    - read-workflow-files
+    - write-run-artifacts
+    - read/write-kv
+evidence:
+  setup: workflows/polymarket-scan-dedup/README.md#setup
+  example: null
 tags: [workflows, polymarket, market-data, dedup]
 ---
 
 # Polymarket Scan And Dedup Workflow
 
-Workflow submission with a concrete artifact at workflows/polymarket-market-scan-dedup@latest.ts.
+Workflow submission with a concrete artifact at workflows/polymarket-scan-dedup/workflow-polymarket-market-scan-dedup@latest.ts.
 
 ## What it does
 
@@ -58,7 +67,7 @@ Workflow submission with a concrete artifact at workflows/polymarket-market-scan
 
 ## Setup
 
-1. Use workflows/polymarket-market-scan-dedup@latest.ts as the source artifact.
+1. Use workflows/polymarket-scan-dedup/workflow-polymarket-market-scan-dedup@latest.ts as the source artifact.
 2. Validate workflow definition and run with workflow run <id>.
 3. Ensure kv.list parsing treats entries as {key, value} objects.
 4. Exclude resolved markets with CAST(hours_until_end AS REAL) > 0.
@@ -66,13 +75,15 @@ Workflow submission with a concrete artifact at workflows/polymarket-market-scan
 
 ## Security and permissions
 
-- Required permissions: read-market-data, read-workflow-files, write-run-artifacts, read/write-kv.
+- security.permissions: read-market-data, read-workflow-files, write-run-artifacts, read/write-kv.
 - Scope controls: allowlist host tools per step and avoid wildcard permissions.
 
 ## Evidence
 
-- Workflow artifact: workflows/polymarket-market-scan-dedup@latest.ts
-- Setup guide: skills/workflows/SKILL.md
+- evidence.setup: workflows/polymarket-scan-dedup/README.md#setup
+- evidence.example: missing (add a committed run artifact path or URL before claiming PR-ready verification)
+- Workflow artifact: workflows/polymarket-scan-dedup/workflow-polymarket-market-scan-dedup@latest.ts
+- Setup guide reference: skills/workflows/SKILL.md
 - Implementation details: skills/workflows/references/polymarket-patterns.md
 
 ## Backlinks
