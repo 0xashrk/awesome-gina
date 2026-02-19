@@ -55,9 +55,7 @@ Scale into BTC when momentum confirms across multiple time windows.
   - any -> halted when drawdown guard trips
 
 ## Security and permissions
-- Auth model: api-key
 - Required permissions: read-market-data, place-order, read-position
-- Required secrets (names only): EXCHANGE_API_KEY, EXCHANGE_API_SECRET
 
 ## Evidence
 - Setup guide: https://example.com/docs/setup
@@ -102,7 +100,6 @@ Runs on a fixed schedule and emits actionable alerts for take-profit bands.
 - Outputs:
   - alert payload with reached band and suggested action checklist
 - Side effects:
-  - sends Telegram message
   - appends run logs
 - Failure modes:
   - provider timeout
@@ -112,9 +109,7 @@ Runs on a fixed schedule and emits actionable alerts for take-profit bands.
   - watching -> alerted-band-1 -> alerted-band-2 -> complete
 
 ## Security and permissions
-- Auth model: api-key
 - Required permissions: read-market-data, send-message
-- Required secrets (names only): TELEGRAM_BOT_TOKEN
 
 ## Evidence
 - Setup guide: https://example.com/docs/sol-notifier-setup
@@ -174,9 +169,7 @@ Coordinates data pulls, rule evaluation, and report publication every day.
 5. Post to ops channel and archive artifact
 
 ## Security and permissions
-- Auth model: oauth + api-key
 - Required permissions: read-positions, read-balances, write-files, send-message
-- Required secrets (names only): OPS_REPORT_WEBHOOK, DATA_PROVIDER_API_KEY
 
 ## Evidence
 - Setup guide: https://example.com/docs/risk-workflow-setup

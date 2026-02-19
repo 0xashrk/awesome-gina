@@ -7,13 +7,12 @@ This policy defines minimum guardrails for publishing community capability entri
 ### Submission Safety Requirements
 
 - No hardcoded secrets, private keys, or tokens.
-- Required secrets must be listed by name only (never values).
 - Permissions must be explicit and least-privileged.
-- Side effects must be declared (writes, transfers, notifications, file operations).
+- Side effects must be declared (transactions, transfers, file operations).
 
 ### Sensitive Capability Handling
 
-- Entries touching financial operations, auth, filesystem write access, or transaction signing require `security-review` label.
+- Entries touching financial operations, filesystem write access, or transaction signing require `security-review` label.
 - These entries cannot bypass Draft PR state.
 
 ### Secret and Token Hygiene

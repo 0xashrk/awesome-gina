@@ -33,7 +33,6 @@ Reference anchors:
 - `license`
 - `status`
 - `verification.tier` (default `unverified`)
-- `security.authModel`
 - `security.permissions`
 - `tags`
 
@@ -105,9 +104,7 @@ Quality rules:
 
 ### Step 4: Security and Permissions
 
-- What auth model is used?
 - What exact permissions are required?
-- Which secrets are required by name only?
 
 ### Step 4b: Skill Content Profile (Skill Only)
 
@@ -171,7 +168,7 @@ Required fields to complete:
 - id, name, type, summary, category
 - repo or homepage
 - license, status, verification.tier
-- authModel, permissions, tags
+- permissions, tags
 - trigger/inputs/outputs/sideEffects/failureModes (for strategy/recipe/workflow)
 - strategy states + transitions (for strategy/recipe when applicable)
 - skill name/description + SKILL.md path (+ optional compatibility/allowed tools) for skill

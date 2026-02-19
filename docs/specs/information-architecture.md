@@ -2,8 +2,6 @@
 
 ## Recommended Topology
 
-- Use `this repository` as the canonical front door.
-- Keep one repo in v0.
 - Add child repos only when there is clear operational need:
   - `<org>/gina-registry` (structured metadata, optional v1)
   - `<org>/gina-tooling` (shared CI/scripts, optional v1+)
@@ -17,13 +15,12 @@ awesome-gina/
   CODEOWNERS
   docs/
     categories/
+      examples.md
       recipes.md
+      prompts.md
       workflows.md
       skills.md
       filesystem.md
-      tooling.md
-      security.md
-      examples.md
   skills/
     <category>/
       <entry-slug>.md
@@ -66,13 +63,12 @@ Each entry page:
 # Awesome Gina
 
 ## Contents
-- [Recipes](docs/categories/recipes.md)
+- [Examples](docs/categories/examples.md)
+- [Prompts](docs/categories/prompts.md)
 - [Workflows](docs/categories/workflows.md)
 - [Skills](docs/categories/skills.md)
 - [Filesystem](docs/categories/filesystem.md)
-- [Tooling](docs/categories/tooling.md)
-- [Security](docs/categories/security.md)
-- [Examples](docs/categories/examples.md)
+- [Recipes](docs/categories/recipes.md)
 
 ## Contribution
 - Link to CONTRIBUTING.md

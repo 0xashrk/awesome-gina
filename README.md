@@ -8,15 +8,15 @@ Community-curated strategies, recipes, workflows, skills, and filesystem pattern
 - [Workflows](docs/categories/workflows.md)
 - [Skills](docs/categories/skills.md)
 - [Filesystem](docs/categories/filesystem.md)
-- [Tooling](docs/categories/tooling.md)
-- [Security](docs/categories/security.md)
+- [Prompts](docs/prompts/)
+- [Submission Wizard Prompt](docs/prompts/submission-wizard-prompt.md)
 - [Examples](docs/categories/examples.md)
 
 ## Quick Start
 
 1. Read CONTRIBUTING.md.
 2. Pick a submission type using docs/specs/capability-schema.md.
-3. Author your entry under skills/<category>/<entry-slug>.md.
+3. Author your entry under skills|filesystem|workflow|recipe|strategy/<category?>/<entry-slug>.md.
 4. Open a PR using the repository PR template.
 
 ## Source Of Truth
@@ -30,3 +30,4 @@ These docs define moderation and schema behavior:
 - docs/specs/security-legal-and-abuse-policy.md
 - docs/specs/submission-agent-wizard-runbook.md
 - docs/specs/worked-submission-examples.md
+- docs/prompts/submission-wizard-prompt.md

@@ -1,4 +1,4 @@
-# Security
+# Prompts
 
 Up: [Awesome Gina Index](../../README.md)
 

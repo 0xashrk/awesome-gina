@@ -24,7 +24,7 @@ Worked examples:
 id: strategy-limit-order-alert
 name: Limit Order Alert Strategy
 type: strategy
-summary: Send Telegram alerts when target prices hit.
+summary: Alert when target prices hit.
 category: strategies/alerts
 status: active
 owner: org-or-user
@@ -68,9 +68,7 @@ One-line value proposition.
 2. ...
 
 ## Security and permissions
-- Auth model: ...
 - Required permissions: ...
-- Required secrets (names only): ...
 
 ## Evidence
 - Setup guide: ...
@@ -93,7 +91,7 @@ One-line value proposition.
 - `license`
 - `verification.tier`
 - `tags`
-- `security.authModel` and `security.permissions` (in body)
+- `security.permissions` (in body)
 
 ## Type-Specific Notes
 

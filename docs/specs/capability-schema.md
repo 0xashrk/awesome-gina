@@ -36,7 +36,7 @@ Other docs should reference this section instead of redefining type semantics.
   "id": "strategy-limit-order-alert",
   "name": "Limit Order Alert Strategy",
   "type": "strategy",
-  "summary": "Send Telegram alerts when target prices hit.",
+  "summary": "Alert target prices hit.",
   "category": "strategies/alerts",
   "repo": "https://github.com/user/repo",
   "homepage": "https://example.com",
@@ -50,7 +50,7 @@ Other docs should reference this section instead of redefining type semantics.
     "trigger": "price-threshold",
     "inputs": [{ "name": "token", "type": "string", "required": true }],
     "outputs": [{ "name": "alertSent", "type": "boolean" }],
-    "sideEffects": ["sends-telegram-message"],
+    "sideEffects": ["writes-file"],
     "failureModes": ["rate-limit", "invalid-symbol"],
     "implementation": {
       "primitives": ["recipe", "workflow"],
@@ -58,9 +58,7 @@ Other docs should reference this section instead of redefining type semantics.
     }
   },
   "security": {
-    "authModel": "api-key",
     "permissions": ["read-market-data", "send-message"],
-    "requiredSecrets": ["TELEGRAM_BOT_TOKEN"]
   },
   "evidence": {
     "setup": "https://...",
@@ -78,7 +76,6 @@ Other docs should reference this section instead of redefining type semantics.
 - `license`
 - `status`
 - `verification.tier`
-- `security.authModel`
 - `security.permissions`
 - `tags`
 

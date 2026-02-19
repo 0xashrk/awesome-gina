@@ -29,7 +29,7 @@ This runbook covers how submissions become pull requests and how maintainers tri
 
 - Default labels in v0: `community-submission`, `unverified`.
 - Labels are applied manually unless target-repo automation is installed.
-- Add `security-review` when auth/secrets scope is non-trivial.
+- Add `security-review` when permissions scope is non-trivial.
 - Add `needs-info` when required evidence is missing.
 
 ## Moderation SLA

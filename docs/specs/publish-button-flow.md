@@ -24,7 +24,7 @@ This document defines the current user flow for publishing a use case to `awesom
 - Basic: title, summary, repo/homepage, license.
 - Capability contract: trigger/inputs/outputs/side effects/failure modes.
 - Strategy/recipe behavior: strategy states + transition rules (when applicable).
-- Safety: auth model, required secrets (names only), permission scope.
+- Safety: permission scope.
 - Evidence: setup link, example link, optional logs/screenshots.
 
 ## Moderation Labels Used in v0
