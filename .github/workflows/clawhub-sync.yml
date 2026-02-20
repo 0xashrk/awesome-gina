@@ -74,7 +74,7 @@ jobs:
             --dry-run \
             --bump "$BUMP" \
             --tags latest \
-            --concurrency 8 2>&1 | tee clawhub-dry-run.log
+            --concurrency 1 2>&1 | tee clawhub-dry-run.log
 
           would_upload="$(grep -Eo 'Dry run: would upload [0-9]+ skill\(s\)\.' clawhub-dry-run.log | tail -n1 | grep -Eo '[0-9]+' || true)"
           if [ -z "$would_upload" ]; then
@@ -191,4 +191,4 @@ jobs:
             --bump "$BUMP" \
             --changelog "CI sync from ${GITHUB_REPOSITORY}@${SHORT_SHA}" \
             --tags latest \
-            --concurrency 8
+            --concurrency 1
