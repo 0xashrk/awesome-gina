@@ -9,6 +9,10 @@ Up: [Awesome Gina Index](../../README.md)
 - [SOL Hourly Buy (75-95 Odds)](../../recipes/hourly-momentum/recipe-sol-hourly-buy-75-95.md) - Buy SOL side in 75-95% band at :45 and :49 hourly.
 - [XRP Hourly Buy (75-95 Odds)](../../recipes/hourly-momentum/recipe-xrp-hourly-buy-75-95.md) - Buy XRP side in 75-95% band at :42 and :47 hourly.
 
+## Daily Momentum
+
+- [BTC Daily Buy (75-95 Odds)](../../recipes/daily-momentum/recipe-btc-daily-buy-75-95.md) - Buy BTC daily side in 75-95% band at 4:39 PM UTC.
+
 ## Hourly Ops
 
 - [Hourly Sell All Positions](../../recipes/hourly-ops/recipe-hourly-sell-all-positions.md) - Aggressively sell all positions and redeem expired at :58 hourly.
