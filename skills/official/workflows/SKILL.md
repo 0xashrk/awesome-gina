@@ -1,9 +1,9 @@
 ---
-name: "Gina Workflows"
+name: "Workflows via Gina"
 description: "Playbook for authoring, running, evaluating, and improving Gina sandbox workflows with safe defaults and repeatable operations."
 ---
 
-# Gina Workflows Skill
+# Workflows via Gina Skill
 
 ## What It Does
 
