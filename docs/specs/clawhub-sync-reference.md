@@ -11,7 +11,7 @@ This guide documents the intended behavior of `.github/workflows/clawhub-sync.ym
 
 | Event | Runs `dry-run` | Runs `publish` |
 | --- | --- | --- |
-| `pull_request` touching `skills/official/**` or workflow file | Yes (except fork PRs) | No |
+| `pull_request` touching `skills/official/**` | Yes (except fork PRs) | No |
 | `push` to `main` touching `skills/official/**` | Yes | Yes |
 | `workflow_dispatch` with `publish=false` | Yes | No |
 | `workflow_dispatch` with `publish=true` | Yes | Yes |
@@ -98,7 +98,7 @@ M --> N[Sync publish with changelog]
 ## Explicit Run Rules
 
 - `dry-run` runs on:
-  - `pull_request` when `skills/official/**` or this workflow file changes, except fork PRs
+  - `pull_request` when `skills/official/**` changes, except fork PRs
   - `push` to `main` when `skills/official/**` changes
   - `workflow_dispatch` (always)
 - `publish` (non-dry-run) runs only on:
@@ -113,7 +113,7 @@ M --> N[Sync publish with changelog]
 
 - Confirm secret name: `CLAWHUB_TOKEN`
 - Confirm official lane path remains `skills/official/**`
-- Confirm whether workflow-file-only changes should trigger dry-run only (current) or also publish on push to `main`
+- Confirm only `skills/official/**` changes should trigger this workflow (PR and push).
 - Confirm desired default bump (`patch`) for push and dry-run dispatches
 - Confirm changelog text format is acceptable
 - Confirm fork PR behavior (skip vs unauthenticated preview)
