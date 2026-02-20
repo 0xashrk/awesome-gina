@@ -66,7 +66,7 @@ Commands validated against `clawhub` CLI v0.7.0 help output.
 | `clawhub sync --bump patch|minor|major` | Yes | Matches documented enum |
 | `clawhub sync --changelog <text>` | Yes | Used for update publish metadata |
 | `clawhub sync --tags <csv>` | Yes | Comma-separated tags (e.g. `latest`) |
-| `clawhub sync --concurrency <n>` | Yes | Registry check fanout |
+| `clawhub sync --concurrency <n>` | Yes | Registry check fanout (configured to 1 to reduce rate-limit failures) |
 | global `--workdir <dir>` | Yes | Used as `skills/official` |
 | global `--dir .` | Yes | Scan root inside workdir |
 
