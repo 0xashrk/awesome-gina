@@ -1,5 +1,6 @@
 ---
 id: polymarket-market-hygiene-scan
+slug: polymarket-market-hygiene-scan
 name: Polymarket Market Hygiene Scan Workflow
 type: workflow
 summary: Scan active Polymarket markets for deduplication and thin-book hygiene before downstream actions.
@@ -8,6 +9,9 @@ status: experimental
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

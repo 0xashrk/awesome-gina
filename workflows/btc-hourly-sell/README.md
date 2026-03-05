@@ -1,5 +1,6 @@
 ---
 id: btc-hourly-sell
+slug: btc-hourly-sell
 name: BTC Hourly Force Sell Workflow
 type: workflow
 summary: Force-close BTC hourly positions at minute 59 and clear state on confirmed exit.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

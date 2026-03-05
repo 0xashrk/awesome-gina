@@ -12,10 +12,15 @@ This runbook covers how submissions become pull requests and how maintainers tri
 
 ## File Targets
 
-- Add/update one entry file in `skills/<lane>/<category>/<slug>.md` where `<lane>` is `community` or `official`.
-- Default new submissions to `skills/community/*`.
-- Use `skills/official/*` only for entries intended to be synced/exported.
-- Promotion from `skills/community/*` to `skills/official/*` is a maintainer action when quality and readiness are met.
+- Add/update one canonical entry file by type:
+  - `strategy`: `strategies/<subcategory>/<entry-slug>.md`
+  - `recipe`: `recipes/<subcategory>/<entry-slug>.md`
+  - `workflow`: `workflows/<workflow-folder>/README.md`
+  - `skill` / `filesystem`: `skills/<lane>/<category>/<slug>.md`
+- Default lane applies only to `skill` and `filesystem` submissions:
+  - default `skills/community/*`
+  - `skills/official/*` only when synced/exported is intended
+- Promotion from `skills/community/*` to `skills/official/*` remains a maintainer action.
 - Update matching category page in `docs/categories/*.md`.
 - Optionally update root README when category is new.
 
@@ -27,7 +32,7 @@ This runbook covers how submissions become pull requests and how maintainers tri
 - Safety and permissions summary.
 - Evidence links.
 - Validation result summary.
-- Lane selection (`community` or `official`) and reason.
+- Path/placement decision and reason (`skills` lane for skill/filesystem only).
 
 ## Labeling Rules
 

@@ -14,26 +14,27 @@ Allowed types:
 
 Canonical definitions: docs/specs/capability-schema.md.
 
-## 2) Author Your Entry
+## 2) Choose Canonical Location
 
-Create a file at one of:
+For `recipe`, `strategy`, and `workflow`, this repository acts as the CMS source of truth:
 
-- skills/community/<category>/<entry-slug>.md
-- skills/official/<category>/<entry-slug>.md
+- `recipe` -> `recipes/<subcategory>/<entry-slug>.md`
+- `strategy` -> `strategies/<subcategory>/<entry-slug>.md`
+- `workflow` -> `workflows/<workflow-folder>/README.md`
+  - Keep runnable artifacts under `workflows/<workflow-folder>/references/<artifact>@latest.ts`
 
-Category roots:
+For `skill` and `filesystem`, use lanes under `skills/`:
 
-- strategy -> strategies
-- recipe -> recipes
-- workflow -> workflows
-- skill -> skills
-- filesystem -> filesystem
+- `skills/community/<category>/<entry-slug>.md` (default, non-synced)
+- `skills/official/<category>/<entry-slug>.md` (synced/exported)
 
-Lane rules:
+Lane rules for skills/filesystem:
 
 - `skills/community/*` is for valid community submissions that are not synced/exported.
 - `skills/official/*` is the synced source for ClawHub ingestion.
 - Maintainers can promote entries from `skills/community/*` to `skills/official/*` when ready.
+
+## 3) Author Your Entry
 
 Use:
 
@@ -43,12 +44,19 @@ Use:
 Required frontmatter fields:
 
 - id, name, type, summary, category
+- slug, version, visibility
+- publicUrl (required when `visibility: public`)
 - status, license
 - repo or homepage (at least one)
 - verification.tier
 - tags
 
-Required body content for strategy, recipe, workflow:
+Required metadata for primitive cross-linking:
+
+- `strategy`: `relationships.recipeIds` (required), `relationships.workflowIds` (optional)
+- `recipe` and `workflow`: `relationships.strategyIds` (optional)
+
+Required body content for `strategy`, `recipe`, `workflow`:
 
 - Trigger
 - Inputs
@@ -56,7 +64,15 @@ Required body content for strategy, recipe, workflow:
 - Side effects
 - Failure modes
 
-## 3) Safety And Policy
+## 4) Validate Before PR
+
+Run:
+
+- `ruby scripts/validate_primitives.rb`
+
+This validates primitive metadata and strategy/recipe/workflow ID references.
+
+## 5) Safety And Policy
 
 Before opening a PR:
 
@@ -67,7 +83,7 @@ Before opening a PR:
 
 Policy reference: docs/specs/security-legal-and-abuse-policy.md.
 
-## 4) Pull Request Rules
+## 6) Pull Request Rules
 
 - One submission concern per PR.
 - Keep changes scoped and reviewable.
@@ -77,7 +93,7 @@ Policy reference: docs/specs/security-legal-and-abuse-policy.md.
 
 Moderation runbook: docs/specs/pr-generation-and-moderation-runbook.md.
 
-## 5) Labels
+## 7) Labels
 
 Maintainers use:
 

@@ -1,5 +1,6 @@
 ---
 id: recipe-hourly-hey-heartbeat
+slug: recipe-hourly-hey-heartbeat
 name: Hourly Hey Heartbeat
 type: recipe
 summary: Send a simple hey heartbeat at minute 52 each hour in Europe/London timezone.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

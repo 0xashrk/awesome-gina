@@ -1,6 +1,13 @@
-# Community Entry Template (v0)
+# Community Entry Template (Dual Model)
 
-Use this for every community entry page under `skills/<lane>/<category>/<entry-slug>.md` where `<lane>` is `community` (default) or `official` (synced/exported).
+Use this for submissions across all supported types.
+
+Canonical file placement by type:
+
+- `strategy` -> `strategies/<subcategory>/<entry-slug>.md`
+- `recipe` -> `recipes/<subcategory>/<entry-slug>.md`
+- `workflow` -> `workflows/<workflow-folder>/README.md`
+- `skill` / `filesystem` -> `skills/<lane>/<category>/<entry-slug>.md` where `<lane>` is `community` (default) or `official` (synced/exported)
 
 This template is an authoring projection of the canonical schema in
 `capability-schema.md`. Field names and enums should stay aligned.
@@ -13,8 +20,7 @@ Worked examples:
 
 ## Naming Convention
 
-- Folder: `skills/<lane>/<category>/`
-- File: `<entry-slug>.md`
+- File path depends on `type` (see canonical file placement above).
 - Slug style: lowercase, hyphenated, stable identifier.
 
 ## Frontmatter (Recommended)
@@ -22,6 +28,7 @@ Worked examples:
 ```yaml
 ---
 id: strategy-limit-order-alert
+slug: strategy-limit-order-alert
 name: Limit Order Alert Strategy
 type: strategy
 summary: Alert when target prices hit.
@@ -31,6 +38,9 @@ owner: org-or-user
 repo: https://github.com/owner/repo
 homepage: https://example.com
 license: MIT
+version: 1.0.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null
@@ -40,7 +50,9 @@ tags: [alerts, automation]
 
 - `type`: `strategy` | `recipe` | `workflow` | `skill` | `filesystem`
 - `status`: `active` | `experimental` | `archived`
+- `visibility`: `public` | `unlisted` | `private`
 - At least one of `repo` or `homepage` is required.
+- `publicUrl` is required when `visibility = public`.
 - `verification.tier`: `unverified` | `verified`
 - `verification.lastVerifiedAt` is required when `verification.tier = verified`.
 
@@ -98,6 +110,7 @@ Then return:
 ## Required Fields
 
 - `id`
+- `slug`
 - `name`
 - `type`
 - `summary`
@@ -105,6 +118,9 @@ Then return:
 - `status`
 - `repo` or `homepage` (at least one)
 - `license`
+- `version`
+- `visibility`
+- `publicUrl` when `visibility = public`
 - `verification.tier`
 - `tags`
 - `security.permissions` (in body)
@@ -112,7 +128,9 @@ Then return:
 ## Type-Specific Notes
 
 - `strategy`, `recipe`, `workflow`: full capability contract is required.
+- `strategy`: must include `relationships.recipeIds`; `relationships.workflowIds` is optional.
 - `recipe`: include a `Quick Copy Prompt (Ask Gina)` section with a `promptText` fenced `text` code block for one-click reuse, including an explicit Execute with agent enum line sourced from lib/ai/agents/index.ts (gina, predictions, perps).
+- `recipe` and `workflow`: may include `relationships.strategyIds` backlinks.
 - `skill`, `filesystem`: concise capability contract is acceptable, but setup and side effects must still be explicit.
 
 ## Skill Content Format (Community Digest)

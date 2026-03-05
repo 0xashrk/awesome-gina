@@ -1,5 +1,6 @@
 ---
 id: recipe-hourly-sell-all-positions
+slug: recipe-hourly-sell-all-positions
 name: Hourly Sell All Positions
 type: recipe
 summary: Aggressively sell all open positions and redeem expired positions at minute 58 each hour.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null
@@ -21,6 +25,9 @@ evidence:
   setup: recipes/hourly-ops/recipe-hourly-sell-all-positions.md#setup
   example: recipes/hourly-ops/recipe-hourly-sell-all-positions.md#evidence
 tags: [hourly, exit, sell-all, redeem, operations]
+relationships:
+  strategyIds:
+    - strategy-hourly-crypto-markets
 ---
 
 # Hourly Sell All Positions

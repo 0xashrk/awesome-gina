@@ -1,5 +1,6 @@
 ---
 id: recipe-hourly-redeem-close-orders
+slug: recipe-hourly-redeem-close-orders
 name: Hourly Redeem and Close Orders
 type: recipe
 summary: Redeem all redeemable positions, sell leftovers, and cancel open limit orders at minute 30 hourly.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null
@@ -22,6 +26,9 @@ evidence:
   setup: recipes/hourly-ops/recipe-hourly-redeem-close-orders.md#setup
   example: recipes/hourly-ops/recipe-hourly-redeem-close-orders.md#evidence
 tags: [hourly, redeem, close, cancel-orders, operations]
+relationships:
+  strategyIds:
+    - strategy-hourly-crypto-markets
 ---
 
 # Hourly Redeem and Close Orders

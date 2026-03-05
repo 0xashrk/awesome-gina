@@ -6,7 +6,7 @@
   - `<org>/gina-registry` (structured metadata, optional v1)
   - `<org>/gina-tooling` (shared CI/scripts, optional v1+)
 
-## Folder Structure (v0)
+## Folder Structure (Dual Model)
 
 ```text
 awesome-gina/
@@ -16,11 +16,26 @@ awesome-gina/
   docs/
     categories/
       examples.md
+      strategies.md
       recipes.md
       prompts.md
       workflows.md
       skills.md
       filesystem.md
+    specs/
+      capability-schema.md
+      strategy-repository-phase1.md
+  recipes/
+    <subcategory>/
+      <entry-slug>.md
+  strategies/
+    <subcategory>/
+      <entry-slug>.md
+  workflows/
+    <workflow-folder>/
+      README.md
+      references/
+        <artifact>@latest.ts
   skills/
     official/
       <category>/
@@ -30,20 +45,13 @@ awesome-gina/
         <entry-slug>.md
     <local-or-internal>/
       ...
-  data/
-    skills.json
-    schema.json
   .github/
-    pull_request_template.md
-    ISSUE_TEMPLATE/
-      add-skill.yml
-      report-stale.yml
     workflows/
-      lint-links.yml
-      validate-metadata.yml
-      stale-sweep.yml
+      clawhub-sync.yml
+      validate-primitives.yml
 ```
 
+- `recipes/*`, `strategies/*`, and `workflows/*` are canonical CMS primitive content.
 - `skills/official/*` is the synced/exported namespace for ClawHub flows.
 - `skills/community/*` is a valid non-synced community namespace.
 - Other namespaces under `skills/*` are allowed for local/internal use.
@@ -75,6 +83,7 @@ Each entry page:
 ## Contents
 - [Examples](docs/categories/examples.md)
 - [Prompts](docs/categories/prompts.md)
+- [Strategies](docs/categories/strategies.md)
 - [Workflows](docs/categories/workflows.md)
 - [Skills](docs/categories/skills.md)
 - [Filesystem](docs/categories/filesystem.md)
@@ -92,10 +101,10 @@ Each entry page:
 Up: [Awesome Gina Index](../../README.md)
 
 ## Subcategory A
-- [Entry Alpha](../../skills/official/subcategory-a/entry-alpha.md) - one line
+- [Entry Alpha](../../recipes/subcategory-a/entry-alpha.md) - one line
 
 ## Subcategory B
-- [Entry Beta](../../skills/official/subcategory-b/entry-beta.md) - one line
+- [Entry Beta](../../recipes/subcategory-b/entry-beta.md) - one line
 
 [Back to Contents](../../README.md)
 ```

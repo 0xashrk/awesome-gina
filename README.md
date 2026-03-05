@@ -4,6 +4,7 @@ Community-curated strategies, recipes, workflows, skills, and filesystem pattern
 
 ## Contents
 
+- [Strategies](docs/categories/strategies.md)
 - [Recipes](docs/categories/recipes.md)
 - [Workflows](docs/categories/workflows.md)
 - [Skills](docs/categories/skills.md)
@@ -16,11 +17,13 @@ Community-curated strategies, recipes, workflows, skills, and filesystem pattern
 
 1. Read CONTRIBUTING.md.
 2. Pick a submission type using docs/specs/capability-schema.md.
-3. Choose a submission lane:
-   - `skills/community/<category>/<entry-slug>.md` (default, valid community submission, not synced/exported)
-   - `skills/official/<category>/<entry-slug>.md` (official, synced/exported to ClawHub)
-4. Use category roots: strategies|recipes|workflows|skills|filesystem.
-5. Set frontmatter `type` to one of strategy|recipe|workflow|skill|filesystem.
+3. Choose the canonical path by type:
+   - `recipe`: `recipes/<subcategory>/<entry-slug>.md`
+   - `strategy`: `strategies/<subcategory>/<entry-slug>.md`
+   - `workflow`: `workflows/<workflow-folder>/README.md` with runnable source in `workflows/<workflow-folder>/references/<artifact>@latest.ts`
+   - `skill` and `filesystem`: `skills/community/<category>/<entry-slug>.md` (default) or `skills/official/<category>/<entry-slug>.md` (synced/exported)
+4. For `recipe`, `strategy`, and `workflow`, include primitive metadata fields: `slug`, `version`, `visibility`, `publicUrl`, and `relationships`.
+5. Run `ruby scripts/validate_primitives.rb`.
 6. Open a PR using the repository PR template.
 
 ## Source Of Truth
@@ -34,4 +37,6 @@ These docs define moderation and schema behavior:
 - docs/specs/security-legal-and-abuse-policy.md
 - docs/specs/submission-agent-wizard-runbook.md
 - docs/specs/worked-submission-examples.md
+- docs/specs/strategy-repository-phase1.md
+- registry/schemas/primitive-frontmatter.schema.json
 - docs/prompts/submission-wizard-prompt.md

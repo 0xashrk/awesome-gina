@@ -1,5 +1,6 @@
 ---
 id: recipe-eth-hourly-buy-75-95
+slug: recipe-eth-hourly-buy-75-95
 name: ETH Hourly Buy (75-95 Odds)
 type: recipe
 summary: Buy ETH hourly Up/Down winner at 75-95% odds and hand off to hourly exit automations.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null
@@ -21,6 +25,9 @@ evidence:
   setup: recipes/hourly-momentum/recipe-eth-hourly-buy-75-95.md#setup
   example: recipes/hourly-momentum/recipe-eth-hourly-buy-75-95.md#evidence
 tags: [eth, hourly, momentum, buy, odds-band]
+relationships:
+  strategyIds:
+    - strategy-hourly-crypto-markets
 ---
 
 # ETH Hourly Buy (75-95 Odds)

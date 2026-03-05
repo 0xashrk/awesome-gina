@@ -1,5 +1,6 @@
 ---
 id: recipe-btc-hourly-force-sell
+slug: recipe-btc-hourly-force-sell
 name: BTC Hourly Force Sell
 type: recipe
 summary: Force-sell BTC hourly position at minute 59 and clear state after confirmed terminal action.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

@@ -1,4 +1,4 @@
-# Submission Agent Wizard Runbook (v0)
+# Submission Agent Wizard Runbook (Dual Model)
 
 This runbook gives users a copy-paste prompt they can send to any agent to refine rough content into a standard submission.
 
@@ -6,15 +6,14 @@ This runbook gives users a copy-paste prompt they can send to any agent to refin
 
 - Help a contributor move from messy notes to a valid community entry.
 - Keep the process wizard-like: short Q&A rounds until required fields are complete.
-- Enforce the v0 standard used by maintainers.
+- Enforce the current maintainer standard.
 
 ## Current Reality
 
 - Submission path is manual PR to `this repository`.
 - No live in-app publish API is required for this flow.
-- Submission lanes:
-  - `community` for valid non-synced submissions
-  - `official` for synced/exported submissions
+- Lanes (`community`, `official`) are used for `skill`/`filesystem` only.
+- `strategy`, `recipe`, and `workflow` use canonical primitive directories as CMS source.
 - Accepted submission types are only:
   - `strategy`
   - `recipe`
@@ -36,10 +35,17 @@ Reference anchors:
 - `license`
 - `status`
 - `verification.tier` (default `unverified`)
+- `slug`
+- `version`
+- `visibility`
+- `publicUrl` when `visibility = public`
 - `security.permissions`
 - `tags`
-- `lane` (`community` or `official`)
-- entry path: `skills/<lane>/<category>/<entry-slug>.md`
+- canonical entry path by type:
+  - `strategy`: `strategies/<subcategory>/<entry-slug>.md`
+  - `recipe`: `recipes/<subcategory>/<entry-slug>.md`
+  - `workflow`: `workflows/<workflow-folder>/README.md`
+  - `skill`/`filesystem`: `skills/<lane>/<category>/<entry-slug>.md`
 
 For `workflow` submissions, also collect source layout details:
 
@@ -138,8 +144,10 @@ Quality rules:
 - Stable slug/id in kebab-case?
 - Category path (example: `strategies/alerts` or `recipes/alerts`)?
 - Repo/homepage and license confirmed?
-- Which lane should this use: `community` (default, non-synced) or `official` (synced/exported)?
-- Does entry path match `skills/<lane>/<category>/<entry-slug>.md`?
+- Version/visibility/publicUrl fields complete and consistent?
+- Which canonical path applies for this type?
+- If `skill`/`filesystem`, which lane should this use: `community` (default, non-synced) or `official` (synced/exported)?
+- Does entry path match the type-specific canonical pattern?
 - For workflow submissions, does source layout match `workflows/<workflow-folder>/README.md` + `workflows/<workflow-folder>/references/<artifact>@latest.ts`?
 
 ## Final Output Contract
@@ -170,9 +178,13 @@ Your job:
 Rules:
 - Accepted types: strategy, recipe, workflow, skill, filesystem.
 - Do not mention or use other submission types.
-- Accepted lanes: community, official.
+- Lanes apply only to `skill` and `filesystem`.
 - Default lane to community unless the user explicitly asks for synced/exported placement.
-- Entry path format: `skills/<lane>/<category>/<entry-slug>.md`.
+- Canonical paths:
+  - strategy: `strategies/<subcategory>/<entry-slug>.md`
+  - recipe: `recipes/<subcategory>/<entry-slug>.md`
+  - workflow: `workflows/<workflow-folder>/README.md`
+  - skill/filesystem: `skills/<lane>/<category>/<entry-slug>.md`
 - Only `skills/official/*` is synced/exported.
 - Never fabricate details.
 - Keep summary <= 140 chars.
@@ -189,12 +201,14 @@ Interaction format each round:
 4) "What is still missing"
 
 Required fields to complete:
-- lane, id, name, type, summary, category
-- entry path: `skills/<lane>/<category>/<entry-slug>.md`
+- id, slug, name, type, summary, category
+- version, visibility, publicUrl (required when visibility = public)
+- canonical entry path by type
 - repo or homepage
 - license, status, verification.tier
 - verification.lastVerifiedAt when verification.tier = verified
 - security.permissions, tags
+- relationships (`strategy`: recipeIds required, workflowIds optional; `recipe`/`workflow`: strategyIds optional)
 - evidence.setup, evidence.example
 - workflow source layout (for workflow): `workflows/<workflow-folder>/README.md` + `workflows/<workflow-folder>/references/<artifact>@latest.ts`
 - trigger/inputs/outputs/sideEffects/failureModes (for strategy/recipe/workflow)
@@ -222,3 +236,4 @@ My initial notes:
 - Strategy and recipe submissions include transition logic when relevant.
 - Workflow submissions enforce the colocated directory pattern and path references resolve.
 - Lane selection is explicit and entry path matches lane intent.
+- Path selection is explicit and entry path matches the type-specific canonical location.

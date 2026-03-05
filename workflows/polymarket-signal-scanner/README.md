@@ -1,5 +1,6 @@
 ---
 id: polymarket-signal-scanner
+slug: polymarket-signal-scanner
 name: Polymarket Signal Scanner Workflow
 type: workflow
 summary: Scan active Polymarket markets, rank high-signal candidates, and persist shortlist snapshots.
@@ -8,6 +9,9 @@ status: experimental
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

@@ -1,5 +1,6 @@
 ---
 id: signal-prediction-stoploss-v2
+slug: signal-prediction-stoploss-v2
 name: Signal Prediction Stop-Loss v2 Workflow
 type: workflow
 summary: Attempt 15m BTC signal trades and monitor filled positions with stop-loss exits.
@@ -8,6 +9,9 @@ status: experimental
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null
