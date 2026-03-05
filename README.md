@@ -4,6 +4,7 @@ Community-curated strategies, recipes, workflows, skills, and filesystem pattern
 
 ## Contents
 
+- [Strategies](docs/categories/strategies.md)
 - [Recipes](docs/categories/recipes.md)
 - [Workflows](docs/categories/workflows.md)
 - [Skills](docs/categories/skills.md)
@@ -34,4 +35,5 @@ These docs define moderation and schema behavior:
 - docs/specs/security-legal-and-abuse-policy.md
 - docs/specs/submission-agent-wizard-runbook.md
 - docs/specs/worked-submission-examples.md
+- docs/specs/strategy-repository-phase1.md
 - docs/prompts/submission-wizard-prompt.md

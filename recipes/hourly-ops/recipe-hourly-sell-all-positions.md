@@ -21,6 +21,9 @@ evidence:
   setup: recipes/hourly-ops/recipe-hourly-sell-all-positions.md#setup
   example: recipes/hourly-ops/recipe-hourly-sell-all-positions.md#evidence
 tags: [hourly, exit, sell-all, redeem, operations]
+relationships:
+  strategyIds:
+    - strategy-hourly-crypto-markets
 ---
 
 # Hourly Sell All Positions

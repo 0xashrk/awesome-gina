@@ -21,6 +21,9 @@ evidence:
   setup: recipes/daily-momentum/recipe-btc-daily-buy-75-95.md#setup
   example: recipes/daily-momentum/recipe-btc-daily-buy-75-95.md#evidence
 tags: [btc, daily, momentum, buy, odds-band]
+relationships:
+  strategyIds:
+    - strategy-daily-btc-markets
 ---
 
 # BTC Daily Buy (75-95 Odds)

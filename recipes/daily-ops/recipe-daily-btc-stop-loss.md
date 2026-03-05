@@ -21,6 +21,9 @@ evidence:
   setup: recipes/daily-ops/recipe-daily-btc-stop-loss.md#setup
   example: recipes/daily-ops/recipe-daily-btc-stop-loss.md#evidence
 tags: [btc, daily, stop-loss, sell, operations]
+relationships:
+  strategyIds:
+    - strategy-daily-btc-markets
 ---
 
 # Daily BTC Stop Loss

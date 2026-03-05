@@ -22,6 +22,9 @@ evidence:
   setup: recipes/hourly-ops/recipe-hourly-redeem-close-orders.md#setup
   example: recipes/hourly-ops/recipe-hourly-redeem-close-orders.md#evidence
 tags: [hourly, redeem, close, cancel-orders, operations]
+relationships:
+  strategyIds:
+    - strategy-hourly-crypto-markets
 ---
 
 # Hourly Redeem and Close Orders

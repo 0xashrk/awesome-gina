@@ -21,6 +21,9 @@ evidence:
   setup: recipes/daily-ops/recipe-daily-crypto-predictions-sell-all.md#setup
   example: recipes/daily-ops/recipe-daily-crypto-predictions-sell-all.md#evidence
 tags: [crypto, daily, sell-all, redeem, operations]
+relationships:
+  strategyIds:
+    - strategy-daily-btc-markets
 ---
 
 # Daily Crypto Predictions Sell All

@@ -21,6 +21,9 @@ evidence:
   setup: recipes/hourly-momentum/recipe-btc-hourly-buy-75-95.md#setup
   example: recipes/hourly-momentum/recipe-btc-hourly-buy-75-95.md#evidence
 tags: [btc, hourly, momentum, buy, odds-band]
+relationships:
+  strategyIds:
+    - strategy-hourly-crypto-markets
 ---
 
 # BTC Hourly Buy (75-95 Odds)
