@@ -1,5 +1,6 @@
 ---
 id: recipe-btc-hourly-sl
+slug: recipe-btc-hourly-sl
 name: BTC Hourly SL
 type: recipe
 summary: Run BTC hourly entry and stop-loss checks from minutes 45 through 58 each hour.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

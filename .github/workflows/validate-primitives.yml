@@ -1,0 +1,31 @@
+name: Validate Primitive Metadata
+
+on:
+  pull_request:
+    paths:
+      - "recipes/**"
+      - "strategies/**"
+      - "workflows/**"
+      - "scripts/validate_primitives.rb"
+      - ".github/workflows/validate-primitives.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "recipes/**"
+      - "strategies/**"
+      - "workflows/**"
+      - "scripts/validate_primitives.rb"
+      - ".github/workflows/validate-primitives.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+      - name: Validate primitive metadata and relationships
+        run: ruby scripts/validate_primitives.rb

@@ -1,5 +1,6 @@
 ---
 id: recipe-btc-daily-buy-75-95
+slug: recipe-btc-daily-buy-75-95
 name: BTC Daily Buy (75-95 Odds)
 type: recipe
 summary: Buy BTC daily Up/Down winner at 75-95% odds with aggressive fill and hand off to exit automations.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

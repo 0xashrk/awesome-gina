@@ -1,5 +1,6 @@
 ---
 id: recipe-daily-crypto-predictions-sell-all
+slug: recipe-daily-crypto-predictions-sell-all
 name: Daily Crypto Predictions Sell All
 type: recipe
 summary: Aggressively sell all prediction positions and redeem expired positions daily at 4:58 PM UTC.
@@ -8,6 +9,9 @@ status: active
 owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
+version: 0.1.0
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null

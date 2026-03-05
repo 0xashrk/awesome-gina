@@ -11,7 +11,7 @@ Phase 1 establishes `strategy` as a first-class primitive in this repository and
 - Add machine-readable bundle references from strategy to recipe/workflow IDs.
 - Expose strategies in repository navigation (`README` and category docs).
 
-This phase does not change submission lanes, sync behavior, or CI pipelines.
+This phase keeps skills sync behavior unchanged and adds primitive validation CI for strategy/recipe/workflow metadata integrity.
 
 ## Primitive Model
 

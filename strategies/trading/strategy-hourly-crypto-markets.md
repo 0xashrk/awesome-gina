@@ -10,8 +10,8 @@ owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
 version: 0.1.0
-visibility: public
-publicUrl: /library/strategies/hourly-crypto-markets
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null
@@ -90,7 +90,7 @@ Hourly multi-asset strategy bundle combining momentum entries with recurrent cle
    - `recipes/hourly-ops/recipe-hourly-redeem-close-orders.md`
 2. Keep scheduler timezone consistent across all six recipes.
 3. Wire strategy route in app CMS:
-   - `/library/strategies/hourly-crypto-markets`
+   - set `publicUrl` to the shared page URL when published (typically `https://askgina.ai/recipe/<uuid>`)
 
 ## Security and permissions
 

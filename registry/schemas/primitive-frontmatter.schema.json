@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/askgina/awesome-gina/registry/schemas/primitive-frontmatter.schema.json",
+  "title": "Awesome Gina Primitive Frontmatter",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "enum": ["recipe", "strategy", "workflow"]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "experimental", "archived"]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string",
+      "format": "uri"
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri"
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": ["public", "unlisted", "private"]
+    },
+    "publicUrl": {
+      "type": ["string", "null"]
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "strategyIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "recipeIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "workflowIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "slug",
+    "name",
+    "type",
+    "summary",
+    "category",
+    "status",
+    "license",
+    "version",
+    "visibility"
+  ],
+  "allOf": [
+    {
+      "anyOf": [
+        { "required": ["repo"] },
+        { "required": ["homepage"] }
+      ]
+    },
+    {
+      "if": {
+        "properties": { "visibility": { "const": "public" } },
+        "required": ["visibility"]
+      },
+      "then": {
+        "required": ["publicUrl"],
+        "properties": {
+          "publicUrl": {
+            "type": "string",
+            "pattern": "^(https?://|/).+"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "strategy" } },
+        "required": ["type"]
+      },
+      "then": {
+        "required": ["relationships"],
+        "properties": {
+          "relationships": {
+            "required": ["recipeIds"],
+            "properties": {
+              "recipeIds": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

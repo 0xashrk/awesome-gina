@@ -10,8 +10,8 @@ owner: askgina
 repo: https://github.com/askgina/awesome-gina
 license: NOASSERTION
 version: 0.1.0
-visibility: public
-publicUrl: /library/strategies/daily-btc-markets
+visibility: unlisted
+publicUrl: null
 verification:
   tier: unverified
   lastVerifiedAt: null
@@ -81,7 +81,7 @@ Daily strategy bundle for BTC entry, risk control, and terminal daily cleanup.
    - `recipes/daily-ops/recipe-daily-crypto-predictions-sell-all.md`
 2. Keep timezone handling consistent across the bundle (`UTC` and `Europe/London` schedule boundaries must be intentional).
 3. Wire strategy route in app CMS:
-   - `/library/strategies/daily-btc-markets`
+   - set `publicUrl` to the shared page URL when published (typically `https://askgina.ai/recipe/<uuid>`)
 
 ## Security and permissions
 

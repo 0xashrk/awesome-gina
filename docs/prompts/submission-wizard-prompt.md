@@ -13,7 +13,7 @@ This wizard is aligned to current submission types:
 - `skill`
 - `filesystem`
 
-Submission lanes:
+Submission lanes (skills/filesystem only):
 
 - `community`: valid community submission, not synced/exported
 - `official`: synced/exported to ClawHub
@@ -51,9 +51,13 @@ Your job:
 Rules:
 - Accepted types: strategy, recipe, workflow, skill, filesystem.
 - Do not mention or use other submission types.
-- Accepted lanes: community, official.
-- Default lane to community unless the user explicitly asks for synced/exported placement.
-- Entry path format: `skills/<lane>/<category>/<entry-slug>.md`.
+- Lanes (`community`/`official`) apply only to `skill` and `filesystem`.
+- For `strategy`, `recipe`, and `workflow`, do not use `skills/*` paths.
+- Canonical paths:
+  - strategy: `strategies/<subcategory>/<entry-slug>.md`
+  - recipe: `recipes/<subcategory>/<entry-slug>.md`
+  - workflow: `workflows/<workflow-folder>/README.md`
+  - skill/filesystem: `skills/<lane>/<category>/<entry-slug>.md`
 - Only `skills/official/*` is synced/exported.
 - Never fabricate details.
 - Keep summary <= 140 chars.
@@ -71,12 +75,14 @@ Interaction format each round:
 4) "What is still missing"
 
 Required fields to complete:
-- lane, id, name, type, summary, category
-- entry path: `skills/<lane>/<category>/<entry-slug>.md`
+- id, slug, name, type, summary, category
+- version, visibility, publicUrl (required when visibility=public)
+- canonical entry path by type (strategy/recipe/workflow/skill/filesystem rules above)
 - repo or homepage
 - license, status, verification.tier
 - verification.lastVerifiedAt when verification.tier = verified
 - security.permissions, tags
+- relationships (`strategy`: recipeIds required, workflowIds optional; `recipe`/`workflow`: strategyIds optional)
 - evidence.setup, evidence.example
 - workflow source layout (for workflow): `workflows/<workflow-folder>/README.md` + `workflows/<workflow-folder>/references/<artifact>@latest.ts`
 - trigger/inputs/outputs/sideEffects/failureModes (for strategy/recipe/workflow)
