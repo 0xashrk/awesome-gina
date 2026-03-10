@@ -13,5 +13,6 @@ Up: [Awesome Gina Index](../../README.md)
 - [BTC Hourly Stop-Loss Workflow](../../workflows/btc-hourly-sl/README.md) - Run BTC hourly entry/stop-loss logic from :45 through :58 each hour (UTC).
 - [BTC Hourly Force Sell Workflow](../../workflows/btc-hourly-sell/README.md) - Force-close BTC hourly position at :59 each hour and clear state on confirmed exit.
 - [Hyperliquid Daily Heikin Ashi EMA7 Risk Flip Workflow](../../workflows/hl-ha-daily-ema7-riskflip/README.md) - Trade daily Hyperliquid HA EMA(7) reversals with flip, cancel, sizing, and stop logic.
+- [Hyperliquid Portfolio Risk Calibrator Workflow](../../workflows/hyperliquid-portfolio-risk-calibrator/README.md) - Read Hyperliquid portfolio state and emit leverage, sizing, and rebalance guidance.
 
 [Back to Contents](../../README.md)
