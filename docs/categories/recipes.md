@@ -4,6 +4,9 @@ Up: [Awesome Gina Index](../../README.md)
 
 ## Starter Pack
 
+- [Morning Portfolio Report](../../recipes/starter-pack/recipe-morning-portfolio-report.md) - Send a neat 9:00 AM daily portfolio report with AUM, top assets, 24-hour performance, and spot/predictions/perps balance totals.
+- [News Report](../../recipes/starter-pack/recipe-news-report.md) - Send a daily crypto news brief covering key portfolio assets and the broader market, ranked by likely impact.
+- [Forward Looking News](../../recipes/starter-pack/recipe-forward-looking-news.md) - Send a daily 9:00 AM odds-based outlook from trending Polymarket markets across commodities, finance, politics, crypto, and culture.
 - [Daily Portfolio Update](../../recipes/starter-pack/recipe-daily-portfolio-update.md) - Send a 9:00 AM daily portfolio update with total AUM, large-asset movers, and relevant news for top holdings.
 - [Asset Screener](../../recipes/starter-pack/recipe-asset-screener.md) - Send a 9:00 AM daily spot-market screener for the top 5 Ethereum, Solana, and Base tokens by volume, with metrics and trade ideas.
 
