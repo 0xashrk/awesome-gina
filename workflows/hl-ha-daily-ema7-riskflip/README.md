@@ -1,9 +1,9 @@
 ---
 id: hl-ha-daily-ema7-riskflip
 slug: hl-ha-daily-ema7-riskflip
-name: Hyperliquid Daily Heikin Ashi EMA7 Risk Flip Workflow
+name: Hyperliquid Daily Trend Reversal Workflow
 type: workflow
-summary: Trade daily Hyperliquid HA EMA(7) reversals with risk sizing, stale-order cleanup, and stop placement.
+summary: Trade daily Hyperliquid trend reversals with bounded sizing, stale-order cleanup, and protective stops.
 category: workflows/trading
 status: experimental
 owner: askgina
@@ -31,7 +31,7 @@ evidence:
 tags: [workflows, trading, hyperliquid, heikin-ashi, ema, risk-management]
 ---
 
-# Hyperliquid Daily Heikin Ashi EMA7 Risk Flip Workflow
+# Hyperliquid Daily Trend Reversal Workflow
 
 Workflow submission with artifact at `workflows/hl-ha-daily-ema7-riskflip/references/hl-ha-daily-ema7-riskflip@latest.ts`.
 

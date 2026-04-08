@@ -1,9 +1,9 @@
 ---
 id: hyperliquid-kill-switch-and-flatten
 slug: hyperliquid-kill-switch-and-flatten
-name: Hyperliquid Kill Switch and Flatten Workflow
+name: Hyperliquid Emergency Risk Exit Workflow
 type: workflow
-summary: Cancel open orders and flatten allowed Hyperliquid positions under an operator-controlled emergency policy.
+summary: Cancel open orders and flatten Hyperliquid exposure when emergency guardrails are breached.
 category: workflows/trading
 status: experimental
 owner: askgina
@@ -29,7 +29,7 @@ evidence:
 tags: [workflows, trading, hyperliquid, kill-switch, flatten, emergency]
 ---
 
-# Hyperliquid Kill Switch and Flatten Workflow
+# Hyperliquid Emergency Risk Exit Workflow
 
 Workflow submission with artifact at `workflows/hyperliquid-kill-switch-and-flatten/references/hyperliquid-kill-switch-and-flatten@latest.ts`.
 
