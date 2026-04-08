@@ -25,7 +25,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-portfolio-risk-calibrator/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, portfolio, risk, calibration]
+tags: [workflows, trading, hyperliquid, portfolio, risk, calibration, read-only]
 ---
 
 # Risk Budget Planner Workflow

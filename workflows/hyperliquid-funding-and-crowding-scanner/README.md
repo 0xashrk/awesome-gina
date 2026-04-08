@@ -26,7 +26,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-funding-and-crowding-scanner/README.md#setup
   example: null
-tags: [workflows, market-data, hyperliquid, funding, crowding, scanner]
+tags: [workflows, market-data, hyperliquid, funding, crowding, scanner, read-only]
 ---
 
 # Crowded Trade Scanner Workflow

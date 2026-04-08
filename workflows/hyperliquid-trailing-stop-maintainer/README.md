@@ -26,7 +26,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-trailing-stop-maintainer/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, trailing-stop, risk-management]
+tags: [workflows, trading, hyperliquid, trailing-stop, risk-management, order-management]
 ---
 
 # Auto Trailing Stops Workflow

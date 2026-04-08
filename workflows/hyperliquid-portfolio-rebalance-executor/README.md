@@ -28,7 +28,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-portfolio-rebalance-executor/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, rebalance, leverage, portfolio]
+tags: [workflows, trading, hyperliquid, rebalance, leverage, portfolio, executes-trades]
 ---
 
 # Portfolio Rebalancer Workflow

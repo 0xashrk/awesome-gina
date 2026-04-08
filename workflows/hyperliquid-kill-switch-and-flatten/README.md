@@ -26,7 +26,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-kill-switch-and-flatten/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, kill-switch, flatten, emergency]
+tags: [workflows, trading, hyperliquid, kill-switch, flatten, emergency, executes-trades]
 ---
 
 # Emergency Risk Exit Workflow

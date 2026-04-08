@@ -28,7 +28,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-multi-asset-trend-basket/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, basket, trend, portfolio]
+tags: [workflows, trading, hyperliquid, basket, trend, portfolio, executes-trades]
 ---
 
 # Trend Basket Trader Workflow

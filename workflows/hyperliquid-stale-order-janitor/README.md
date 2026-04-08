@@ -25,7 +25,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-stale-order-janitor/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, stale-orders, cleanup, ops]
+tags: [workflows, trading, hyperliquid, stale-orders, cleanup, ops, order-management]
 ---
 
 # Stale Order Cleanup Workflow

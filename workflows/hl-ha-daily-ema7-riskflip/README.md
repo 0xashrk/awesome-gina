@@ -28,7 +28,7 @@ security:
 evidence:
   setup: workflows/hl-ha-daily-ema7-riskflip/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, heikin-ashi, ema, risk-management]
+tags: [workflows, trading, hyperliquid, heikin-ashi, ema, risk-management, executes-trades]
 ---
 
 # Daily Trend Reversal Workflow

@@ -28,7 +28,7 @@ security:
 evidence:
   setup: workflows/hyperliquid-position-guardian/README.md#setup
   example: null
-tags: [workflows, trading, hyperliquid, guardrails, liquidation, stop-loss]
+tags: [workflows, trading, hyperliquid, guardrails, liquidation, stop-loss, executes-trades]
 ---
 
 # Position Risk Watcher Workflow
