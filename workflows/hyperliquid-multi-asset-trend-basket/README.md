@@ -1,7 +1,7 @@
 ---
 id: hyperliquid-multi-asset-trend-basket
 slug: hyperliquid-multi-asset-trend-basket
-name: Hyperliquid Trend Basket Trader Workflow
+name: Trend Basket Trader Workflow
 type: workflow
 summary: Build and execute a bounded multi-asset Hyperliquid trend basket when momentum aligns.
 category: workflows/trading
@@ -31,7 +31,7 @@ evidence:
 tags: [workflows, trading, hyperliquid, basket, trend, portfolio]
 ---
 
-# Hyperliquid Trend Basket Trader Workflow
+# Trend Basket Trader Workflow
 
 Workflow submission with artifact at `workflows/hyperliquid-multi-asset-trend-basket/references/hyperliquid-multi-asset-trend-basket@latest.ts`.
 

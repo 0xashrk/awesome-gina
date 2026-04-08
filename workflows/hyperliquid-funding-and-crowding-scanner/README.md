@@ -1,7 +1,7 @@
 ---
 id: hyperliquid-funding-and-crowding-scanner
 slug: hyperliquid-funding-and-crowding-scanner
-name: Hyperliquid Crowded Trade Scanner Workflow
+name: Crowded Trade Scanner Workflow
 type: workflow
 summary: Rank crowded Hyperliquid perp setups using funding, spread, and held-exposure pressure.
 category: workflows/market-data
@@ -29,7 +29,7 @@ evidence:
 tags: [workflows, market-data, hyperliquid, funding, crowding, scanner]
 ---
 
-# Hyperliquid Crowded Trade Scanner Workflow
+# Crowded Trade Scanner Workflow
 
 Workflow submission with artifact at `workflows/hyperliquid-funding-and-crowding-scanner/references/hyperliquid-funding-and-crowding-scanner@latest.ts`.
 

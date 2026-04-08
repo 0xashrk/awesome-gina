@@ -1,7 +1,7 @@
 ---
 id: hyperliquid-portfolio-risk-calibrator
 slug: hyperliquid-portfolio-risk-calibrator
-name: Hyperliquid Risk Budget Planner Workflow
+name: Risk Budget Planner Workflow
 type: workflow
 summary: Read Hyperliquid portfolio state and output risk budgets, leverage caps, and rebalance guidance.
 category: workflows/trading
@@ -28,7 +28,7 @@ evidence:
 tags: [workflows, trading, hyperliquid, portfolio, risk, calibration]
 ---
 
-# Hyperliquid Risk Budget Planner Workflow
+# Risk Budget Planner Workflow
 
 Workflow submission with artifact at `workflows/hyperliquid-portfolio-risk-calibrator/references/hyperliquid-portfolio-risk-calibrator@latest.ts`.
 
